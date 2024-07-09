@@ -31,6 +31,7 @@
     "@automapper/nestjs": "^8.8.1",
     "@aws-sdk/client-ses": "^3.609.0",
     "@nestjs/common": "^10.0.0",
+    "@nestjs/config": "^3.2.3",
     "@nestjs/core": "^10.0.0",
     "@nestjs/platform-express": "^10.0.0",
     "@sendgrid/mail": "^8.1.3",
