@@ -1,5 +1,7 @@
 
 
+## [0.1.1](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.1.0...v0.1.1) (2024-07-10)
+
 ## 0.1.0 (2024-07-10)
 
 
