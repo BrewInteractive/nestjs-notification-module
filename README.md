@@ -24,10 +24,23 @@ This package is developed to be used in NestJS projects. The purpose of the modu
 ## Requirements
 
 
-| Variable Name          | Description                                                     | Required | Default |
-| ---------------------- | --------------------------------------------------------------- | -------- | ------- |
-|                        |                                                                 | -        | -       |
-|                        |                                                                 | -        | -       |
+| Variable Name                 | Description                                                     | Required | Default          |
+| ----------------------------- | --------------------------------------------------------------- | -------- | ---------------- |
+| `EMAIL_SERVICE`               | The email service provider to be used                           | Yes      | -                |
+| `EMAIL_FROM`                  | The sender email address                                        | Yes      | -                |
+| `EMAIL_SUBJECT`               | Default subject for emails                                      | No       | "Notification"   |
+| `AWS_SES_REGION`              | AWS SES service region                                          | Yes      | -                |
+| `AWS_SES_ACCESS_KEY_ID`       | AWS SES access key ID                                           | Yes      | -                |
+| `AWS_SES_SECRET_ACCESS_KEY`   | AWS SES secret access key                                       | Yes      | -                |
+| `SMTP_HOST`                   | SMTP server address                                             | Yes      | -                |
+| `SMTP_USER`                   | SMTP user name                                                  | Yes      | -                |
+| `SMTP_PASSWORD`               | SMTP password                                                   | Yes      | -                |
+| `SENDGRID_API_KEY`            | SendGrid API key                                                | Yes      | -                |
+| `SMS_SERVICE`                 | The SMS service provider to be used                             | Yes      | -                |
+| `MUTLUCELL_USERNAME`          | Mutlucell user name                                             | Yes      | -                |
+| `MUTLUCELL_PASSWORD`          | Mutlucell password                                              | Yes      | -                |
+| `MUTLUCELL_ORIGINATOR`        | Mutlucell message sender name (originator)                      | Yes      | -                |
+| `MUTLUCELL_API_URL`           | Mutlucell API URL                                               | Yes      | -                |
 
 ## Conclusion
 
