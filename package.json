@@ -29,6 +29,7 @@
   "dependencies": {
     "@automapper/classes": "^8.8.1",
     "@automapper/nestjs": "^8.8.1",
+    "@automapper/core": "^8.8.1",
     "@aws-sdk/client-ses": "^3.609.0",
     "@nestjs/common": "^10.0.0",
     "@nestjs/config": "^3.2.3",
