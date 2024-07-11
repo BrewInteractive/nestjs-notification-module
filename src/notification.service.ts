@@ -13,7 +13,7 @@ export class NotificationService {
     private readonly configService: ConfigService,
   ) {}
   async sendSms(sms: Sms): Promise<void> {
-    this.smsService.sendSmsAsync({
+    await this.smsService.sendSmsAsync({
       message: sms.message,
       phoneNumber: sms.phoneNumber,
     });
