@@ -1,5 +1,12 @@
 
 
+## [0.3.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.1.2...v0.3.0) (2024-07-11)
+
+
+### Features
+
+* Add configuration for email and SMS in notification module ([023955a](https://github.com/BrewInteractive/nestjs-notification-module/commit/023955ad271825a5f3bb5bfcb4d59491427ee395))
+
 ## [0.2.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.1.2...v0.2.0) (2024-07-10)
 
 
