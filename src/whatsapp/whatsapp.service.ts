@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
-import { WhatsappMessage } from './dto'
+import { WhatsappMessage } from './dto';
 
 @Injectable()
 export abstract class WhatsappService {
-    abstract sendMessageAsync(whatsappMessage: WhatsappMessage): Promise<void>;
+  abstract sendMessageAsync(whatsappMessage: WhatsappMessage): Promise<void>;
 }

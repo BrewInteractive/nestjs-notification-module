@@ -3,7 +3,7 @@ export class MutluCellSmsXmlDto {
     metin: string;
     nums: string;
   };
-  "@": {
+  '@': {
     ka: string;
     pwd: string;
     org: string;
@@ -16,13 +16,13 @@ export class MutluCellSmsXmlDto {
     username: string,
     password: string,
     originator: string,
-    charset: string = "turkish"
+    charset = 'turkish',
   ) {
     this.mesaj = {
       metin: message,
       nums: phoneNumber,
     };
-    this["@"] = {
+    this['@'] = {
       ka: username,
       pwd: password,
       org: originator,

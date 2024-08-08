@@ -33,7 +33,7 @@ describe('WhatsappModule', () => {
         .mutate({ whatsappService: whatsappServiceType })
         .one();
     const expectedError = new Error(
-        whatsappServiceType + ' service is not defined for Whatsapp Service',
+      whatsappServiceType + ' service is not defined for Whatsapp Service',
     );
     await expect(
       Test.createTestingModule({

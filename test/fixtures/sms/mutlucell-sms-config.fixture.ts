@@ -1,5 +1,5 @@
-import { Mock } from "mockingbird";
-import { MutluCellSmsConfig } from "../../../src/sms/providers";
+import { Mock } from 'mockingbird';
+import { MutluCellSmsConfig } from '../../../src/sms/providers';
 
 export class MutluCellSmsConfigFixture extends MutluCellSmsConfig {
   @Mock((faker) => faker.internet.userName())

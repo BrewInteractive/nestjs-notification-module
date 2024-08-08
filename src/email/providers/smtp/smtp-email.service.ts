@@ -1,17 +1,17 @@
-import * as Nodemailer from "nodemailer";
+import * as Nodemailer from 'nodemailer';
 
-import { Email } from "../../dto/email.dto";
-import { EmailService } from "../../email.service";
-import { Inject, Injectable } from "@nestjs/common";
-import SMTPTransport from "nodemailer/lib/smtp-transport";
-import { SmtpEmailConfig } from "./smtp-email.config";
+import { Email } from '../../dto/email.dto';
+import { EmailService } from '../../email.service';
+import { Inject, Injectable } from '@nestjs/common';
+import SMTPTransport from 'nodemailer/lib/smtp-transport';
+import { SmtpEmailConfig } from './smtp-email.config';
 
 @Injectable()
 export class SmtpEmailService extends EmailService {
   private smtpClient: Nodemailer.Transporter<SMTPTransport.SentMessageInfo>;
 
   constructor(
-    @Inject("SmtpEmailConfig") private readonly smtpConfig: SmtpEmailConfig
+    @Inject('SmtpEmailConfig') private readonly smtpConfig: SmtpEmailConfig,
   ) {
     super();
     this.smtpClient = Nodemailer.createTransport({

@@ -1,1 +1,1 @@
-export * from "./meta-whatsapp-config.fixture";
+export * from './meta-whatsapp-config.fixture';

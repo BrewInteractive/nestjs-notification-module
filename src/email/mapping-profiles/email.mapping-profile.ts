@@ -1,8 +1,8 @@
-import { SendEmailCommand, SendEmailCommandInput } from "@aws-sdk/client-ses";
-import { AutomapperProfile, InjectMapper } from "@automapper/nestjs";
-import { Mapper, createMap, forMember, mapFrom } from "@automapper/core";
-import { Injectable } from "@nestjs/common";
-import { Email } from "../dto/email.dto";
+import { SendEmailCommand, SendEmailCommandInput } from '@aws-sdk/client-ses';
+import { AutomapperProfile, InjectMapper } from '@automapper/nestjs';
+import { Mapper, createMap, forMember, mapFrom } from '@automapper/core';
+import { Injectable } from '@nestjs/common';
+import { Email } from '../dto/email.dto';
 
 @Injectable()
 export class EmailProfile extends AutomapperProfile {
@@ -37,9 +37,9 @@ export class EmailProfile extends AutomapperProfile {
                     },
                   },
                 },
-              } as SendEmailCommandInput)
-          )
-        )
+              } as SendEmailCommandInput),
+          ),
+        ),
       );
     };
   }

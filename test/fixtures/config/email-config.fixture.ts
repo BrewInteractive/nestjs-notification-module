@@ -1,7 +1,7 @@
-import { AwsEmailConfig, SmtpEmailConfig } from "../../../src/email/providers";
+import { AwsEmailConfig, SmtpEmailConfig } from '../../../src/email/providers';
 
-import { EmailServiceType } from "../../../src/email/enum/email-service-type.enum";
-import { Mock } from "mockingbird";
+import { EmailServiceType } from '../../../src/email/enum/email-service-type.enum';
+import { Mock } from 'mockingbird';
 
 class AwsEmailConfigFixture extends AwsEmailConfig {
   @Mock()

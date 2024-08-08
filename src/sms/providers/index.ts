@@ -1,1 +1,1 @@
-export * from "./mutlucell";
+export * from './mutlucell';

@@ -1,3 +1,3 @@
 export enum WhatsappServiceType {
-    META = "meta",
+  META = 'meta',
 }

@@ -18,9 +18,7 @@ export class NotificationService {
       phoneNumber: sms.phoneNumber,
     });
   }
-  async sendEmail(
-    email: Email,
-  ): Promise<void> {
+  async sendEmail(email: Email): Promise<void> {
     return await this.emailService.sendEmailAsync({
       from: this.configService.get<string>('emailFrom'),
       to: email.to,

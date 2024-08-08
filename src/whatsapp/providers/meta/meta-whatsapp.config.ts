@@ -1,5 +1,4 @@
 export class MetaWhatsappConfig {
-    metaApiUrl: string;
-    token: string;
-  }
-  
+  metaApiUrl: string;
+  token: string;
+}
