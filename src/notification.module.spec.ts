@@ -1,4 +1,4 @@
-import { EmailConfigFixture, SmsConfigFixture } from '../test/fixtures';
+import { EmailConfigFixture, SmsConfigFixture, WhatsappConfigFixture } from '../test/fixtures';
 
 import { AutomapperModule } from '@automapper/nestjs';
 import { ConfigModule } from '@nestjs/config';
@@ -13,6 +13,7 @@ describe('NotificationModule', () => {
   beforeEach(async () => {
     const mockEmailConfig = () => MockFactory(EmailConfigFixture).one();
     const mockSmsConfig = () => MockFactory(SmsConfigFixture).one();
+    const mockWhatsappConfig = () => MockFactory(WhatsappConfigFixture).one();
     const app = await Test.createTestingModule({
       imports: [
         AutomapperModule.forRoot({
@@ -20,7 +21,7 @@ describe('NotificationModule', () => {
         }),
         ConfigModule.forRoot({
           isGlobal: true,
-          load: [mockEmailConfig, mockSmsConfig],
+          load: [mockEmailConfig, mockSmsConfig, mockWhatsappConfig],
         }),
         NotificationModule,
       ],
