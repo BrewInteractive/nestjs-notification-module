@@ -1,17 +1,17 @@
-import { EmailFixture, SendGridConfigFixture } from "../../../../test/fixtures";
-import { Test, TestingModule } from "@nestjs/testing";
+import { EmailFixture, SendGridConfigFixture } from '../../../../test/fixtures';
+import { Test, TestingModule } from '@nestjs/testing';
 
-import { MockFactory } from "mockingbird";
-import { SendgridService } from "./sendgrid.service";
+import { MockFactory } from 'mockingbird';
+import { SendgridService } from './sendgrid.service';
 
-const SendgridMail = require("@sendgrid/mail");
+const SendgridMail = require('@sendgrid/mail');
 
-jest.mock("@sendgrid/mail", () => ({
+jest.mock('@sendgrid/mail', () => ({
   setApiKey: jest.fn(),
   send: jest.fn(),
 }));
 
-describe("SendgridService", () => {
+describe('SendgridService', () => {
   let emailService: SendgridService;
 
   beforeEach(async () => {
@@ -20,7 +20,7 @@ describe("SendgridService", () => {
       providers: [
         SendgridService,
         {
-          provide: "SendgridConfig",
+          provide: 'SendgridConfig',
           useValue: sendgridConfig,
         },
       ],
@@ -29,11 +29,11 @@ describe("SendgridService", () => {
     emailService = module.get<SendgridService>(SendgridService);
   });
 
-  it("should be defined", () => {
+  it('should be defined', () => {
     expect(emailService).toBeDefined();
   });
 
-  it("should send email successfully", async () => {
+  it('should send email successfully', async () => {
     // Arrange
     const email = MockFactory(EmailFixture).one();
 
@@ -51,7 +51,7 @@ describe("SendgridService", () => {
     });
   });
 
-  it("should send email successfully (option values are not sent)", async () => {
+  it('should send email successfully (option values are not sent)', async () => {
     // Arrange
     const email = MockFactory(EmailFixture).one();
     delete email.cc;

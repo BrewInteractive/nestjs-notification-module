@@ -3,5 +3,5 @@ import { Sms } from './dto';
 
 @Injectable()
 export abstract class SmsService {
-    abstract sendSmsAsync(sms: Sms): Promise<void>;
+  abstract sendSmsAsync(sms: Sms): Promise<void>;
 }

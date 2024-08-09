@@ -1,5 +1,5 @@
 export enum EmailServiceType {
-  AWS = "aws",
-  SMTP = "smtp",
-  SENDGRID = "sendgrid",
+  AWS = 'aws',
+  SMTP = 'smtp',
+  SENDGRID = 'sendgrid',
 }

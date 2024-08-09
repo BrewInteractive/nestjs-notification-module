@@ -1,5 +1,5 @@
-import { Mock } from "mockingbird";
-import { SmtpEmailConfig } from "../../../src/email/providers";
+import { Mock } from 'mockingbird';
+import { SmtpEmailConfig } from '../../../src/email/providers';
 
 export class AuthSmtpEmailConfigFixture {
   user: string;

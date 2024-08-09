@@ -1,4 +1,4 @@
 export class Sms {
-    message: string;
-    phoneNumber: string;
+  message: string;
+  phoneNumber: string;
 }

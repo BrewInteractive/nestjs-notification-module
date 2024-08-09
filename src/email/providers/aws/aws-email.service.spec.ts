@@ -1,20 +1,20 @@
-import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
-import { Test, TestingModule } from "@nestjs/testing";
+import { SESClient, SendEmailCommand } from '@aws-sdk/client-ses';
+import { Test, TestingModule } from '@nestjs/testing';
 
-import { AutomapperModule } from "@automapper/nestjs";
-import { AwsEmailConfig } from "./aws-email.config";
-import { AwsEmailService } from "./aws-email.service";
-import { EmailFixture } from "../../../../test/fixtures/email/email.fixture";
-import { EmailProfile } from "../../mapping-profiles/email.mapping-profile";
-import { MockFactory } from "mockingbird";
-import { classes } from "@automapper/classes";
+import { AutomapperModule } from '@automapper/nestjs';
+import { AwsEmailConfig } from './aws-email.config';
+import { AwsEmailService } from './aws-email.service';
+import { EmailFixture } from '../../../../test/fixtures/email/email.fixture';
+import { EmailProfile } from '../../mapping-profiles/email.mapping-profile';
+import { MockFactory } from 'mockingbird';
+import { classes } from '@automapper/classes';
 
-describe("AwsEmailService", () => {
+describe('AwsEmailService', () => {
   let emailService: AwsEmailService;
   let config = {
-    region: "us-west-2",
-    accessKeyId: "ACCESS_KEY_ID",
-    secretAccessKey: "SECRET_ACCESS_KEY",
+    region: 'us-west-2',
+    accessKeyId: 'ACCESS_KEY_ID',
+    secretAccessKey: 'SECRET_ACCESS_KEY',
   } as AwsEmailConfig;
 
   beforeEach(async () => {
@@ -29,7 +29,7 @@ describe("AwsEmailService", () => {
         AwsEmailService,
         EmailProfile,
         {
-          provide: "AwsEmailConfig",
+          provide: 'AwsEmailConfig',
           useValue: config,
         },
       ],
@@ -38,7 +38,7 @@ describe("AwsEmailService", () => {
     emailService = module.get<AwsEmailService>(AwsEmailService);
   });
 
-  it("should send an email successfully", async () => {
+  it('should send an email successfully', async () => {
     // Arrange
     const fixture = MockFactory(EmailFixture);
     const email = fixture.one();

@@ -1,2 +1,2 @@
-export * from "./mutlucell-sms.service";
-export * from "./mutlucell-sms.config";
+export * from './mutlucell-sms.service';
+export * from './mutlucell-sms.config';

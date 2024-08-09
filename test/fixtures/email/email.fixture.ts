@@ -1,5 +1,5 @@
-import { Email } from "../../../src/email/dto/email.dto";
-import { Mock } from "mockingbird";
+import { Email } from '../../../src/email/dto/email.dto';
+import { Mock } from 'mockingbird';
 
 export class EmailFixture extends Email {
   @Mock((faker) => faker.internet.email())
