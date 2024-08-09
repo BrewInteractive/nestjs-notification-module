@@ -1,5 +1,19 @@
 
 
+## [0.4.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.3.0...v0.4.0) (2024-08-09)
+
+
+### Features
+
+* add auth token to whatsapp config. ([81a7952](https://github.com/BrewInteractive/nestjs-notification-module/commit/81a79524e702242bf56a6c8dc9bdfc2e083a1128))
+* **VILLB-487-488:** create whatsapp module and meta provider to send messages via whatsapp. ([a50e372](https://github.com/BrewInteractive/nestjs-notification-module/commit/a50e372fb1df766e58bc4ea5c81572e8f208c7e8))
+
+
+### Bug Fixes
+
+* fix test case. ([c1657cb](https://github.com/BrewInteractive/nestjs-notification-module/commit/c1657cba345cb45c787ac86578cd95745a552e4e))
+* lint and format. ([4f73de0](https://github.com/BrewInteractive/nestjs-notification-module/commit/4f73de054504381b1481f3fc5b0797977ece78fa))
+
 ## [0.3.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.1.2...v0.3.0) (2024-07-11)
 
 
