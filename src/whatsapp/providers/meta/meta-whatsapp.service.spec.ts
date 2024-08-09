@@ -43,7 +43,8 @@ describe('MetaWhatsappService', () => {
       {
         method: 'POST',
         headers: {
-          Authorization: 'Bearer ' + mockMetaWhatsappConfig.token,
+          'Authorization': 'Bearer ' + mockMetaWhatsappConfig.token,
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(whatsappMessage),
       },

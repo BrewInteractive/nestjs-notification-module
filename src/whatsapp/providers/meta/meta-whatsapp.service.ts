@@ -20,7 +20,8 @@ export class MetaWhatsappService extends WhatsappService {
     await fetch(this.metaWhatsappConfig.metaApiUrl, {
       method: 'POST',
       headers: {
-        Authorization: 'Bearer ' + this.metaWhatsappConfig.token,
+        'Authorization': 'Bearer ' + this.metaWhatsappConfig.token,
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(template),
     }).then((response) => response.text());
