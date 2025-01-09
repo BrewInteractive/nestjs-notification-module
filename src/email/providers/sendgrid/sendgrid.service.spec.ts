@@ -29,6 +29,10 @@ describe('SendgridService', () => {
     emailService = module.get<SendgridService>(SendgridService);
   });
 
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('should be defined', () => {
     expect(emailService).toBeDefined();
   });
@@ -48,6 +52,12 @@ describe('SendgridService', () => {
       html: email.content,
       cc: email.cc,
       bcc: email.bcc,
+      attachments: email.attachments?.map(attachment => ({
+        content: attachment.content,
+        filename: attachment.filename,
+        type: attachment.type,
+        disposition: attachment.disposition,
+      })),
     });
   });
 
@@ -56,6 +66,7 @@ describe('SendgridService', () => {
     const email = MockFactory(EmailFixture).one();
     delete email.cc;
     delete email.bcc;
+    delete email.attachments;
 
     // Act
     await emailService.sendEmailAsync(email);
@@ -68,6 +79,36 @@ describe('SendgridService', () => {
       html: email.content,
       cc: [],
       bcc: [],
+      attachments: [],
     });
+  });
+
+  it('should send email with attachments successfully', async () => {
+    // Arrange
+    const email = MockFactory(EmailFixture).one();
+
+    // Act
+    await emailService.sendEmailAsync(email);
+
+    // Assert
+    expect(SendgridMail.send).toHaveBeenCalledWith({
+      from: email.from,
+      to: email.to,
+      subject: email.subject,
+      html: email.content,
+      cc: email.cc,
+      bcc: email.bcc,
+      attachments: email.attachments,
+    });
+  });
+
+  it('should handle SendGrid error', async () => {
+    // Arrange
+    const email = MockFactory(EmailFixture).one();
+    const error = new Error('SendGrid error');
+    SendgridMail.send.mockRejectedValueOnce(error);
+
+    // Act & Assert
+    await expect(emailService.sendEmailAsync(email)).rejects.toThrow('SendGrid error');
   });
 });
