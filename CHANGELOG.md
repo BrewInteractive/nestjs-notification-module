@@ -1,5 +1,12 @@
 
 
+## [0.5.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.4.0...v0.5.0) (2025-01-10)
+
+
+### Features
+
+* add attachment for sendgrid service ([0d2f7b6](https://github.com/BrewInteractive/nestjs-notification-module/commit/0d2f7b65b302e646f4deab83c0b35710cff36e57))
+
 ## [0.4.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.3.0...v0.4.0) (2024-08-09)
 
 
