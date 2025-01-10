@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { SendgridConfig } from './sendgrid.config';
 import { Email } from '../../dto/email.dto';
-const SendgridMail = require('@sendgrid/mail');
+import * as SendgridMail from '@sendgrid/mail';
 
 @Injectable()
 export class SendgridService {
@@ -18,6 +18,12 @@ export class SendgridService {
       html: email.content,
       cc: email.cc ?? [],
       bcc: email.bcc ?? [],
+      attachments: email.attachments?.map(attachment => ({
+        content: attachment.content,
+        filename: attachment.filename,
+        type: attachment.type,
+        disposition: attachment.disposition ?? 'attachment',
+      })) ?? []
     });
   }
 }
