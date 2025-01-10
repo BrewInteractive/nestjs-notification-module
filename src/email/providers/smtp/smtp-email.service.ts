@@ -31,6 +31,12 @@ export class SmtpEmailService extends EmailService {
       html: email.content,
       cc: email.cc ?? [],
       bcc: email.bcc ?? [],
+      attachments: email.attachments?.map(attachment => ({
+        content: attachment.content,
+        filename: attachment.filename,
+        type: attachment.type,
+        disposition: attachment.disposition ?? 'attachment',
+      })) ?? []
     });
   }
 }
