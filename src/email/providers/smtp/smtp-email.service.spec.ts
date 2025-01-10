@@ -49,6 +49,7 @@ describe('SmtpEmailService', () => {
       html: mockEmail.content,
       cc: mockEmail.cc,
       bcc: mockEmail.bcc,
+      attachments: mockEmail.attachments,
     });
   });
 
@@ -57,7 +58,7 @@ describe('SmtpEmailService', () => {
     const mockEmail = MockFactory(EmailFixture).one();
     delete mockEmail.cc;
     delete mockEmail.bcc;
-
+    delete mockEmail.attachments;
     jest
       .spyOn(emailService['smtpClient'], 'sendMail')
       .mockResolvedValue(Promise.resolve(null));
@@ -73,6 +74,7 @@ describe('SmtpEmailService', () => {
       html: mockEmail.content,
       bcc: [],
       cc: [],
+      attachments: [],
     });
   });
 });
