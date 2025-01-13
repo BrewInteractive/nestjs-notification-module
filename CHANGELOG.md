@@ -1,5 +1,12 @@
 
 
+## [0.7.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.6.0...v0.7.0) (2025-01-13)
+
+
+### Features
+
+* include attachments in notification service for email sending ([0f6b61e](https://github.com/BrewInteractive/nestjs-notification-module/commit/0f6b61e3e9c7955025dfc2433f108ef1482d08c1))
+
 ## [0.6.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.5.0...v0.6.0) (2025-01-13)
 
 
