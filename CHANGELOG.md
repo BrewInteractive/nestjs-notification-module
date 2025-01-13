@@ -1,5 +1,12 @@
 
 
+## [0.6.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.5.0...v0.6.0) (2025-01-13)
+
+
+### Features
+
+* add attachment for smtp service ([5e7412f](https://github.com/BrewInteractive/nestjs-notification-module/commit/5e7412f0ae1513449209d7623caec13af540e77d))
+
 ## [0.5.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.4.0...v0.5.0) (2025-01-10)
 
 
