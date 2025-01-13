@@ -36,6 +36,7 @@ export class SmtpEmailService extends EmailService {
         filename: attachment.filename,
         type: attachment.type,
         disposition: attachment.disposition ?? 'attachment',
+        encoding: attachment.encoding,
       })) ?? []
     });
   }

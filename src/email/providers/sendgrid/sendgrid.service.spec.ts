@@ -57,6 +57,7 @@ describe('SendgridService', () => {
         filename: attachment.filename,
         type: attachment.type,
         disposition: attachment.disposition,
+        encoding: attachment.encoding,
       })),
     });
   });

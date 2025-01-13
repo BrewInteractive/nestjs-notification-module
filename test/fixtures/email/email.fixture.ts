@@ -10,6 +10,8 @@ class AttachmentFixture {
   type: string;
   @Mock((faker) => faker.lorem.lines())
   disposition: string;
+  @Mock((faker) => faker.lorem.lines())
+  encoding: string;
 }
 
 export class EmailFixture extends Email {

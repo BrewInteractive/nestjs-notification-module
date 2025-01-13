@@ -23,6 +23,7 @@ export class SendgridService {
         filename: attachment.filename,
         type: attachment.type,
         disposition: attachment.disposition ?? 'attachment',
+        encoding: attachment.encoding,
       })) ?? []
     });
   }

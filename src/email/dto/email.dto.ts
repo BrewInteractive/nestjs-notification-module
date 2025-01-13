@@ -3,6 +3,7 @@ export interface Attachment {
   filename: string;
   type: string; 
   disposition: string;
+  encoding: string;
 }
 
 export class Email {
