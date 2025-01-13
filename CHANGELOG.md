@@ -1,5 +1,12 @@
 
 
+## [0.8.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.7.0...v0.8.0) (2025-01-13)
+
+
+### Features
+
+* add encoding property to email attachments across services ([f1e302c](https://github.com/BrewInteractive/nestjs-notification-module/commit/f1e302ce58a50e2efb890349199565407b6c0bd5))
+
 ## [0.7.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.6.0...v0.7.0) (2025-01-13)
 
 
