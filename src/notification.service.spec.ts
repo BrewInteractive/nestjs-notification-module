@@ -64,6 +64,7 @@ describe('NotificationService', () => {
       from: mockEmailConfig.emailFrom,
       subject: mockEmail.subject,
       content: mockEmail.content,
+      attachments: mockEmail.attachments,
     });
   });
 

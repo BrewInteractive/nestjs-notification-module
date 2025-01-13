@@ -24,6 +24,7 @@ export class NotificationService {
       to: email.to,
       subject: email.subject,
       content: email.content,
+      attachments: email.attachments,
     });
   }
 }
