@@ -1,5 +1,12 @@
 
 
+## [0.8.1](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.8.0...v0.8.1) (2025-05-23)
+
+
+### Bug Fixes
+
+* fix for notification service ([7351274](https://github.com/BrewInteractive/nestjs-notification-module/commit/7351274c09e250e0e65c5c957e1ea8ca1569c822))
+
 ## [0.8.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.7.0...v0.8.0) (2025-01-13)
 
 
