@@ -50,6 +50,7 @@ describe('NotificationService', () => {
   it('should send email', async () => {
     // Arrange
     const mockEmail = MockFactory(EmailFixture).one();
+    delete mockEmail.from;
 
     const emailSpy = jest
       .spyOn(emailService, 'sendEmailAsync')
@@ -60,11 +61,8 @@ describe('NotificationService', () => {
 
     // Assert
     expect(emailSpy).toHaveBeenCalledWith({
-      to: mockEmail.to,
       from: mockEmailConfig.emailFrom,
-      subject: mockEmail.subject,
-      content: mockEmail.content,
-      attachments: mockEmail.attachments,
+      ...mockEmail,
     });
   });
 
