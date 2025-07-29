@@ -1,5 +1,12 @@
 
 
+## [0.11.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.10.0...v0.11.0) (2025-07-29)
+
+
+### Features
+
+* enhance WhatsApp message DTO with additional interfaces and fixtures for media, location, contact, and interactive message types ([b103734](https://github.com/BrewInteractive/nestjs-notification-module/commit/b103734c0e76f9d8b2eadc311898977406d43042))
+
 ## [0.10.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.8.1...v0.10.0) (2025-07-29)
 
 
