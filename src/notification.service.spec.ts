@@ -3,6 +3,8 @@ import {
   EmailFixture,
   SmsConfigFixture,
   SmsFixture,
+  WhatsappConfigFixture,
+  WhatsappMessageFixture,
 } from '../test/fixtures';
 import { Test, TestingModule } from '@nestjs/testing';
 
@@ -15,24 +17,32 @@ import { NotificationService } from './notification.service';
 import { SmsModule } from './sms/sms.module';
 import { SmsService } from './sms/sms.service';
 import { classes } from '@automapper/classes';
-
+import { WhatsappService } from './whatsapp/whatsapp.service';
+import { WhatsappModule } from './whatsapp/whatsapp.module';
 describe('NotificationService', () => {
   let notificationService: NotificationService;
   let emailService: EmailService;
   let smsService: SmsService;
+  let whatsappService: WhatsappService;
   const mockEmailConfig = MockFactory(EmailConfigFixture).one();
   const mockSmsConfig = MockFactory(SmsConfigFixture).one();
+  const mockWhatsappConfig = MockFactory(WhatsappConfigFixture).one();
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       imports: [
         EmailModule,
         SmsModule,
+        WhatsappModule,
         AutomapperModule.forRoot({
           strategyInitializer: classes(),
         }),
         ConfigModule.forRoot({
           isGlobal: true,
-          load: [() => mockEmailConfig, () => mockSmsConfig],
+          load: [
+            () => mockEmailConfig,
+            () => mockSmsConfig,
+            () => mockWhatsappConfig,
+          ],
         }),
       ],
       providers: [NotificationService],
@@ -41,6 +51,7 @@ describe('NotificationService', () => {
     notificationService = module.get<NotificationService>(NotificationService);
     emailService = module.get<EmailService>('EmailService');
     smsService = module.get<SmsService>('SmsService');
+    whatsappService = module.get<WhatsappService>('WhatsappService');
   });
 
   it('should be defined', () => {
@@ -79,5 +90,20 @@ describe('NotificationService', () => {
 
     // Assert
     expect(sendSmsAsyncSpy).toHaveBeenCalledWith(mockSms);
+  });
+
+  it('should send whatsapp message', async () => {
+    // Arrange
+    const mockWhatsappMessage = MockFactory(WhatsappMessageFixture).one();
+
+    const sendMessageAsyncSpy = jest
+      .spyOn(whatsappService, 'sendMessageAsync')
+      .mockResolvedValue();
+
+    // Act
+    await notificationService.sendWhatsappMessage(mockWhatsappMessage);
+
+    // Assert
+    expect(sendMessageAsyncSpy).toHaveBeenCalledWith(mockWhatsappMessage);
   });
 });
