@@ -1,5 +1,12 @@
 
 
+## [0.10.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.8.1...v0.10.0) (2025-07-29)
+
+
+### Features
+
+* add WhatsApp messaging functionality to notification service ([e99d507](https://github.com/BrewInteractive/nestjs-notification-module/commit/e99d507214ceda3280a375e69063a53f4ad9d5e4))
+
 ## [0.9.0](https://github.com/BrewInteractive/nestjs-notification-module/compare/v0.8.1...v0.9.0) (2025-07-29)
 
 
